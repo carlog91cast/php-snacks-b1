@@ -1,19 +1,5 @@
-<!-- <?php
-        // $matchMilano = array(
-        //     "Milano" => 21,
-        //     "La Spezia" => 33,
-        // );
-        // echo "$matchMilano";
+<!-- snack 1 -->
 
-        // $matchRoma = array(
-        //     "Roma" => 15,
-        //     "Vieste" => 48,
-        // );
-        // $matchCagliari = array(
-        //     "Cagliari" => 84,
-        //     "Salerno" => 25,
-        // )
-        ?> -->
 
 <!-- snack 4 -->
 
