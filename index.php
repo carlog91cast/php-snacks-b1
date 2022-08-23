@@ -64,16 +64,39 @@
     </form>
 
     <?php
-        $name = $_GET['name'];
-        $mail = $_GET['mail'];
-        $age = $_GET['age'];
+    $name = $_GET['name'];
+    $mail = $_GET['mail'];
+    $age = $_GET['age'];
 
-        if ((strlen($name) > 3) && (strpos($mail, '@') > 0 && strpos($mail, '.') > 3) && (is_numeric($age))){
-            echo "accesso riuscito";
-        } else {
-            echo "accesso negato";
-        }
+    if ((strlen($name) > 3) && (strpos($mail, '@') > 0 && strpos($mail, '.') > 3) && (is_numeric($age))) {
+        echo "accesso riuscito";
+    } else {
+        echo "accesso negato";
+    }
     ?>
+
+    <h1>Php Snacks 3</h1>
+    <h2>Creare un array con 15 numeri casuali, tenendo conto che l'array non dovrà contenere lo stesso numero più di una volta </h2>
+
+    <?php
+    $numbers = [];
+
+    while (count($numbers) < 15) {
+        $number = rand(1, 50);
+
+        if (!in_array($number, $numbers)) {
+            $numbers[] = $number;
+        }
+    }
+
+    var_dump($numbers);
+    ?>
+
+    <h1>Php Snacks 4</h1>
+    <h2>Prendere un paragrafo abbastanza lungo, contenente diverse frasi. Prendere il paragrafo e suddividerlo in tanti paragrafi.
+        Ogni punto un nuovo paragrafo. </h2>
+
+    
 </body>
 
 </html>
