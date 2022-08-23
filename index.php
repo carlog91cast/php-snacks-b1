@@ -119,7 +119,7 @@
     $students = [
         [
             'name' => 'Beppe',
-            'last name' => 'Fetish',
+            'last_name' => 'Fetish',
             'votes' => [
                 'matematica' => '2',
                 'storia' => '4',
@@ -131,7 +131,7 @@
         ],
         [
             'name' => 'Giuseppe',
-            'last name' => 'Simone',
+            'last_name' => 'Simone',
             'votes' => [
                 'matematica' => '3',
                 'storia' => '6',
@@ -143,7 +143,7 @@
         ],
         [
             'name' => 'Tonio',
-            'last name' => 'Cartonio',
+            'last_name' => 'Cartonio',
             'votes' => [
                 'matematica' => '9',
                 'storia' => '9',
@@ -155,7 +155,7 @@
         ],
         [
             'name' => 'Lupo',
-            'last name' => 'Lucio',
+            'last_name' => 'Lucio',
             'votes' => [
                 'matematica' => '2',
                 'storia' => '1',
@@ -166,15 +166,15 @@
             ]
         ],
         [
-            'name' => 'Emma',
-            'last name' => 'Bonino',
+            'name' => 'Gandalf',
+            'last_name' => 'Il Bianco',
             'votes' => [
                 'matematica' => '9',
-                'storia' => '8',
-                'italiano' => '5',
-                'filosofia' => '9',
-                'latino' => '4',
-                'educazione fisica' => '0'
+                'storia' => '10',
+                'italiano' => '9',
+                'filosofia' => '10',
+                'latino' => '10',
+                'educazione fisica' => '3'
             ]
         ]
     ];
@@ -187,10 +187,11 @@
             for ($i=0; $i <count($students) ; $i++) { 
             $subjects = $students[$i]['votes'];
             $votes = count($students[$i]['votes']);
+            $media = (array_sum($students[$i]['votes'])) / count($students[$i]['votes'])
         ?>
          <li>
             <?php
-                echo
+                echo $students[$i]['name'] . ' - ' . $students[$i]['last_name'] . ' - ' . 'Media = ' . $media;
             ?>
          </li>
          <?php 
