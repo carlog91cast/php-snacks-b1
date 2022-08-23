@@ -96,7 +96,109 @@
     <h2>Prendere un paragrafo abbastanza lungo, contenente diverse frasi. Prendere il paragrafo e suddividerlo in tanti paragrafi.
         Ogni punto un nuovo paragrafo. </h2>
 
-    
+    <?php
+    $paragraph = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Accumsan in nisl nisi scelerisque eu ultrices vitae. Nunc consequat interdum varius sit amet. Facilisis gravida neque convallis a. In fermentum et sollicitudin ac orci phasellus egestas tellus rutrum. Ornare suspendisse sed nisi lacus. Nisl nunc mi ipsum faucibus vitae. Malesuada fames ac turpis egestas integer eget. Neque volutpat ac tincidunt vitae semper quis lectus nulla at. Cursus mattis molestie a iaculis at erat pellentesque. Ipsum suspendisse ultrices gravida dictum fusce ut placerat orci. Proin sagittis nisl rhoncus mattis rhoncus urna. Pretium nibh ipsum consequat nisl vel pretium. Cras adipiscing enim eu turpis egestas pretium aenean pharetra. Porta nibh venenatis cras sed. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat. Ac ut consequat semper viverra nam libero. Cras tincidunt lobortis feugiat vivamus at augue eget arcu dictum.";
+
+    $splittedParagraph = explode(".", $paragraph);
+    ?>
+
+    <?php for ($i = 0; $i < count($splittedParagraph); $i++) { ?>
+        <p>
+            <?php
+            echo $splittedParagraph[$i];
+            ?>
+        </p>
+    <?php } ?>
+
+    <h1>Php Snacks 4</h1>
+    <h2>Creare un array contenente qualche alunno di un'ipotetica classe.
+        Ogni alunno avrà Nome, Cognome e un array contenente i suoi voti scolastici.
+        Stampare Nome, Cognome e la media dei voti di ogni alunno. </h2>
+
+    <?php
+    $students = [
+        [
+            'name' => 'Beppe',
+            'last name' => 'Fetish',
+            'votes' => [
+                'matematica' => '2',
+                'storia' => '4',
+                'italiano' => '8',
+                'filosofia' => '6',
+                'latino' => '2',
+                'educazione fisica' => '9'
+            ]
+        ],
+        [
+            'name' => 'Giuseppe',
+            'last name' => 'Simone',
+            'votes' => [
+                'matematica' => '3',
+                'storia' => '6',
+                'italiano' => '4',
+                'filosofia' => '7',
+                'latino' => '2',
+                'educazione fisica' => '0'
+            ]
+        ],
+        [
+            'name' => 'Tonio',
+            'last name' => 'Cartonio',
+            'votes' => [
+                'matematica' => '9',
+                'storia' => '9',
+                'italiano' => '10',
+                'filosofia' => '5',
+                'latino' => '1',
+                'educazione fisica' => '8'
+            ]
+        ],
+        [
+            'name' => 'Lupo',
+            'last name' => 'Lucio',
+            'votes' => [
+                'matematica' => '2',
+                'storia' => '1',
+                'italiano' => '5',
+                'filosofia' => '2',
+                'latino' => '4',
+                'educazione fisica' => '0'
+            ]
+        ],
+        [
+            'name' => 'Emma',
+            'last name' => 'Bonino',
+            'votes' => [
+                'matematica' => '9',
+                'storia' => '8',
+                'italiano' => '5',
+                'filosofia' => '9',
+                'latino' => '4',
+                'educazione fisica' => '0'
+            ]
+        ]
+    ];
+    var_dump($students);
+
+    ?>
+    <h1>Studenti</h1>
+    <ul>
+        <?php
+            for ($i=0; $i <count($students) ; $i++) { 
+            $subjects = $students[$i]['votes'];
+            $votes = count($students[$i]['votes']);
+        ?>
+         <li>
+            <?php
+                echo
+            ?>
+         </li>
+         <?php 
+            }
+         ?>
+    </ul>
+
+
 </body>
 
 </html>
